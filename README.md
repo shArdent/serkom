@@ -1,69 +1,37 @@
-# React + TypeScript + Vite
+# React + Vite + Bun Setup
+Proyek ini menggunakan React sebagai library UI, Vite sebagai bundler modern, dan Bun sebagai runtime JavaScript yang super cepat.
+🚀 Fitur
+⚡ Super cepat dengan Bun
+- ⚛️ React + JSX
+- 🔥 Vite untuk hot module replacement
+- 🎯 Siap untuk pengembangan dan produksi
+# 📦 Prasyarat
+Bun (v1.0+)
+Install Bun:
+curl -fsSL https://bun.sh/install | bash
+#🛠️ Instalasi
+1. Inisialisasi Project dengan Vite + React
+bun create vite@latest my-react-app --template react
+cd my-react-app
+2. Install Dependency
+bun install
+3. Jalankan Development Server
+bun run dev
+Buka http://localhost:5173 di browser untuk melihat hasilnya.
+#📂 Struktur Direktori
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+my-react-app/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── App.jsx
+│   ├── main.jsx
+├── index.html
+├── vite.config.js
+├── package.json
+├── bun.lockb
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+#📜 Script Penting
+- bun run dev — Menjalankan server pengembangan
+- bun run build — Build untuk produksi
+- bun run preview — Menjalankan hasil build secara lokal
