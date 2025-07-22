@@ -20,6 +20,7 @@ bun run dev
 Buka http://localhost:5173 di browser untuk melihat hasilnya.
 #📂 Struktur Direktori
 
+``` 
 my-react-app/
 ├── public/
 ├── src/
@@ -30,7 +31,7 @@ my-react-app/
 ├── vite.config.js
 ├── package.json
 ├── bun.lockb
-
+```
 #📜 Script Penting
 - bun run dev — Menjalankan server pengembangan
 - bun run build — Build untuk produksi
